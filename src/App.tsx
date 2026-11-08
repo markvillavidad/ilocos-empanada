@@ -3,7 +3,8 @@ import { SiteHeader } from './components/layout/SiteHeader'
 import { SiteFooter } from './components/layout/SiteFooter'
 import { MessengerButton } from './components/layout/MessengerButton'
 import { HeroSection } from './components/sections/HeroSection'
-import { StorySection } from './components/sections/StorySection'
+import { WhatIsSection } from './components/sections/WhatIsSection'
+import { OurStorySection } from './components/sections/OurStorySection'
 import { MenuSection } from './components/sections/MenuSection'
 import { VisitSection } from './components/sections/VisitSection'
 import { BrandTicker } from './components/sections/BrandTicker'
@@ -15,7 +16,8 @@ function App() {
       <main>
         <HeroSection />
         <BrandTicker />
-        <StorySection />
+        <WhatIsSection />
+        <OurStorySection />
         <MenuSection />
         <VisitSection />
       </main>

@@ -5,7 +5,7 @@ export function VisitSection() {
   return (
     <section className="visit section-wrap" id="visit">
       <div className="visit-decoration" aria-hidden="true"><span>✳</span></div>
-      <div className="section-kicker">03 <span>—</span> Let’s make it a date</div>
+      <div className="section-kicker">04 <span>—</span> Let’s make it a date</div>
       <div className="visit-content">
         <div>
           <h2>Your next<br />favorite bite<br /><em>is waiting.</em></h2>

@@ -29,7 +29,7 @@ export function MenuSection() {
   return (
     <section className="menu-section" id="menu">
       <div className="section-wrap">
-        <div className="section-kicker">02 <span>—</span> Good things to eat</div>
+        <div className="section-kicker">03 <span>—</span> Good things to eat</div>
         <div className="menu-heading">
           <div className="menu-heading-copy">
             <h2>Come hungry.<br /><em>Leave happy.</em></h2>
