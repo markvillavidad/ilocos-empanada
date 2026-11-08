@@ -152,7 +152,7 @@ h2 { font-size: clamp(38px, 4.5vw, 58px); line-height: 1.1; margin-bottom: 0; }
   .visit-content { padding-top: 23px; gap: 30px; }
   .visit-content h2 { font-size: 48px; }
   .visit-card { justify-self: stretch; max-width: none; padding: 27px; }
-  .visit-decoration { left: auto; right: 3%; top: 28%; font-size: 40px; }
+  .visit-decoration, .visit-card::after { display: none; }
   .site-footer { padding: 20px 6%; flex-wrap: wrap; gap: 15px; }
   .site-footer > p { display: none; }
 }

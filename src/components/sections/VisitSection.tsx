@@ -20,7 +20,7 @@ export function VisitSection() {
           <h3>We’d love to<br />see you soon.</h3>
           <address className="visit-address">
             <a
-              href="https://www.bing.com/maps?cp=43.59077~-79.76653&lvl=16"
+              href="https://share.google/mXJEjy9LTXBq2HYid"
               target="_blank"
               rel="noreferrer"
             >
