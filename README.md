@@ -1,75 +1,66 @@
-# React + TypeScript + Vite
+# Ilocos Empanada
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive website for Ilocos Empanada, a small home-based business in
+Meadowvale, Mississauga. The site introduces Ilocos empanada, shares the
+business story and menu, and helps visitors find the business or start an
+order through Messenger.
 
-Currently, two official plugins are available:
+Website: [ilocosempanada.ca](https://ilocosempanada.ca)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting started
 
-## React Compiler
+### Requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js and npm
 
-## Expanding the ESLint configuration
+### Install dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```sh
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Run the development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```sh
+npm run dev
 ```
+
+Vite prints the local URL when the server starts. By default, open
+[http://localhost:5173](http://localhost:5173).
+
+## Available commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server with hot module replacement. |
+| `npm run build` | Type-check the TypeScript project and create a production build in `dist/`. |
+| `npm run preview` | Serve the production build locally, usually at `http://localhost:4173`. |
+| `npm run lint` | Run ESLint on the project. |
+
+## Website sections
+
+- **Our Story** navigation links to the dish introduction and the business
+  story.
+- **Menu** shows the available empanadas and prices.
+- **Find Us** includes the pickup location and contact information.
+- **Order Now** and the floating Messenger button open the business's
+  Messenger conversation.
+
+The Messenger destination is defined in `src/constants.ts` and shared by the
+ordering links throughout the site.
+
+## Project structure
+
+```text
+src/
+  assets/                  Images and brand assets
+  components/
+    layout/                Header, footer, brand, and Messenger button
+    sections/              Hero, story, menu, and location sections
+  App.tsx                  Page composition
+  App.css                  Site styles and responsive layouts
+  constants.ts             Shared site links
+```
+
+The project uses React, TypeScript, and Vite. Global page styles and responsive
+rules are in `src/App.css`.
