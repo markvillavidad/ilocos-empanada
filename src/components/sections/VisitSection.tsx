@@ -1,4 +1,5 @@
 import empanadaBoxPhoto from '../../assets/photos/Ilocos Empanada Box and Sauces.png'
+import { MESSENGER_URL } from '../../constants'
 
 export function VisitSection() {
   return (
@@ -38,8 +39,8 @@ export function VisitSection() {
             <a href="tel:+12896529921">+1 289 652 9921</a>
           </p>
           <p className="visit-order">
-            <strong>Message us</strong> on{' '}
-            <a href="https://www.facebook.com/ilocosempanada.ca" target="_blank" rel="noreferrer">Facebook</a>
+            <strong>Order now</strong> on{' '}
+            <a href={MESSENGER_URL} target="_blank" rel="noreferrer">Messenger</a>
             {' '}or{' '}
             <a href="https://www.instagram.com/ilocosempanada.ca/" target="_blank" rel="noreferrer">Instagram</a>
             {' '}to place your order.

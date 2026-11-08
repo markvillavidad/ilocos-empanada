@@ -1,4 +1,5 @@
 import empanadaPhoto from '../../assets/photos/Golden Empanada Cross-Section.png'
+import { MESSENGER_URL } from '../../constants'
 
 export function HeroSection() {
   return (
@@ -8,8 +9,8 @@ export function HeroSection() {
         <h1>Golden, crispy<br />and full of <em>heart.</em></h1>
         <p className="hero-description">Meet Ilocos empanada: a beloved Filipino street-food classic with a crunch you can hear and a story worth sharing.</p>
         <div className="hero-actions">
-          <a className="button button-dark" href="#menu">Get to know the menu <span aria-hidden="true">↓</span></a>
-          <a className="text-link" href="#our-story">Our story <span aria-hidden="true">↗</span></a>
+          <a className="button button-dark" href={MESSENGER_URL} target="_blank" rel="noreferrer">Order Now <span aria-hidden="true">↗</span></a>
+          <a className="text-link" href="#menu">View the menu <span aria-hidden="true">↓</span></a>
         </div>
         <div className="hero-footnote"><span className="sun-mark">✳</span><span>Inspired by the food and warmth of Ilocos, Philippines</span></div>
       </div>

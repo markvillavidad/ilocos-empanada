@@ -13,8 +13,9 @@ main { overflow: hidden; }
 .site-header nav a, .header-cta, .site-footer > a:last-child { font-size: 12px; font-weight: 600; text-decoration: none; }
 .site-header nav a { color: #756b5f; transition: color .2s; }
 .site-header nav a:hover, .site-footer > a:last-child:hover { color: var(--orange-dark); }
-.header-cta { border-bottom: 1px solid var(--orange); padding-bottom: 5px; }
-.header-cta span { color: var(--orange); padding-left: 5px; }
+.header-cta { display: inline-flex; align-items: center; gap: 9px; border-radius: 2px; padding: 13px 17px; background: var(--orange); color: #fffaf1; transition: transform .2s, background .2s; }
+.header-cta:hover { background: var(--orange-dark); transform: translateY(-2px); }
+.header-cta span { color: inherit; font-size: 15px; }
 .hero { min-height: 600px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 20px; padding: 46px 11% 56px 13%; }
 .hero-copy { padding: 6px 0 0; }
 .eyebrow, .section-kicker { font-size: 10px; line-height: 1.4; letter-spacing: 1.35px; text-transform: uppercase; font-weight: 700; color: #927e68; }
@@ -96,6 +97,11 @@ h2 { font-size: clamp(38px, 4.5vw, 58px); line-height: 1.1; margin-bottom: 0; }
 .visit-social svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; }
 .visit-social svg path { fill: currentColor; stroke: none; }
 .visit-social svg .social-icon-dot { fill: currentColor; stroke: none; }
+.messenger-button { position: fixed; z-index: 20; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 18px; border-radius: 28px; background: var(--orange); box-shadow: 0 4px 18px rgb(51 37 28 / 24%); color: #fffaf1; font-size: 12px; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s; }
+.messenger-button:hover { background: var(--orange-dark); transform: translateY(-2px); }
+.messenger-button:focus-visible { outline: 3px solid #33251c; outline-offset: 3px; }
+.messenger-button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.messenger-button svg path + path { stroke-width: 1.5; }
 .visit-decoration { position: absolute; color: #dfbd7e; left: 1%; top: 38%; font-size: 57px; }
 .site-footer { min-height: 87px; padding: 18px 7.2%; border-top: 1px solid #eee9df; display: flex; align-items: center; justify-content: space-between; }
 .site-footer > p { margin: 0; color: #8c8173; font-family: 'Playfair Display', Georgia, serif; font-size: 12px; font-style: italic; }
@@ -104,7 +110,7 @@ h2 { font-size: clamp(38px, 4.5vw, 58px); line-height: 1.1; margin-bottom: 0; }
 @media (max-width: 800px) {
   .site-header { padding: 0 5%; height: 72px; }
   .site-header nav { gap: 20px; }
-  .header-cta { display: none; }
+  .header-cta { padding: 11px 13px; font-size: 11px; }
   .hero { padding: 55px 8% 66px; grid-template-columns: 1fr .9fr; }
   .hero-art { height: 340px; }
   .art-tag { width: 64px; height: 64px; font-size: 11px; }
@@ -119,11 +125,11 @@ h2 { font-size: clamp(38px, 4.5vw, 58px); line-height: 1.1; margin-bottom: 0; }
   .menu-card { padding: 20px; }
 }
 @media (max-width: 600px) {
-  .site-header { height: 67px; }
-  .site-header nav { gap: 13px; }
-  .site-header nav a { font-size: 10px; }
-  .site-header nav a:first-child { display: none; }
-  .brand img { width: 82px; height: 55px; }
+  .site-header { height: 67px; padding: 0 4%; }
+  .site-header nav { gap: 7px; }
+  .site-header nav a { font-size: 9px; }
+  .header-cta { gap: 5px; padding: 9px 10px; font-size: 9px; }
+  .brand img { width: 62px; height: 48px; }
   .hero { display: flex; flex-direction: column; align-items: stretch; padding: 53px 7% 44px; gap: 38px; }
   h1 { font-size: clamp(38px, 11vw, 64px); }
   .hero-description { max-width: 360px; }
@@ -152,6 +158,7 @@ h2 { font-size: clamp(38px, 4.5vw, 58px); line-height: 1.1; margin-bottom: 0; }
   .visit-content { padding-top: 23px; gap: 30px; }
   .visit-content h2 { font-size: 48px; }
   .visit-card { justify-self: stretch; max-width: none; padding: 27px; }
+  .messenger-button { right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); min-height: 50px; padding: 0 15px; font-size: 11px; }
   .visit-decoration, .visit-card::after { display: none; }
   .site-footer { padding: 20px 6%; flex-wrap: wrap; gap: 15px; }
   .site-footer > p { display: none; }
